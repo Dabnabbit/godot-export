@@ -9,6 +9,7 @@ import { ExportPresets, ExportPreset, BuildResult } from './types/GodotExport';
 import sanitize from 'sanitize-filename';
 import {
   GODOT_CONFIG_PATH,
+  BLENDER_DOWNLOAD_URL,
   GODOT_DOWNLOAD_URL,
   GODOT_TEMPLATES_DOWNLOAD_URL,
   GODOT_WORKING_PATH,
