@@ -25,6 +25,7 @@ import {
   CACHE_ACTIVE,
 } from './constants';
 
+const BLENDER_EXE = 'blender';
 const GODOT_EXECUTABLE = 'godot_executable';
 const GODOT_ZIP = 'godot.zip';
 const GODOT_TEMPLATES_FILENAME = 'godot_templates.tpz';
@@ -123,10 +124,10 @@ async function downloadExecutable(): Promise<void> {
 }
 
 async function downloadBlender(): Promise<void> {
-  const executablePath = path.join(GODOT_WORKING_PATH, GODOT_ZIP);
-  const cacheKey = `godot-executable-${GODOT_DOWNLOAD_URL}`;
-  const restoreKey = `godot-executable-${GODOT_DOWNLOAD_URL}`;
-  await downloadFile(executablePath, GODOT_DOWNLOAD_URL, cacheKey, restoreKey);
+  const executablePath = path.join(GODOT_WORKING_PATH, BLENDER_EXE);
+  const cacheKey = `godot-executable-${BLENDER_DOWNLOAD_URL}`;
+  const restoreKey = `godot-executable-${BLENDER_DOWNLOAD_URL}`;
+  await downloadFile(executablePath, BLENDER_DOWNLOAD_URL, cacheKey, restoreKey);
 }
 
 function isGhes(): boolean {
