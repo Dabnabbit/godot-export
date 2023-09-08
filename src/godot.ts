@@ -333,6 +333,14 @@ async function addEditorSettings(): Promise<void> {
 
   const editorSettingsPath = path.join(GODOT_CONFIG_PATH, EDITOR_SETTINGS_FILENAME);
   await io.cp(editorSettingsDist, editorSettingsPath, { force: false });
+  
+  fs.readFile(editorSettingsPath, 'utf8', function (err,data) {
+    var formatted = data.replace('filesystem/import/blender/blender3_path = ""', 'filesystem/import/blender/blender3_path = "testtest"');
+    fs.writeFile(someFile, formatted, 'utf8', function (err) {
+      if (err)
+        return console.log(err);
+    });
+  });  
   core.info(`Wrote editor settings to ${editorSettingsPath}`);
 }
 
