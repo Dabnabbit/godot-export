@@ -5,6 +5,7 @@ import * as os from 'os';
 const ARCHIVE_OUTPUT = core.getInput('archive_output') === 'true';
 const CACHE_ACTIVE = core.getInput('cache') === 'true';
 const GENERATE_RELEASE_NOTES = core.getInput('generate_release_notes') === 'true';
+const BLENDER_DOWNLOAD_URL = core.getInput('blender_executable_download_url');
 const GODOT_DOWNLOAD_URL = core.getInput('godot_executable_download_url');
 const GODOT_TEMPLATES_DOWNLOAD_URL = core.getInput('godot_export_templates_download_url');
 const RELATIVE_EXPORT_PATH = core.getInput('relative_export_path');
