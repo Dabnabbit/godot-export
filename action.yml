@@ -17,9 +17,12 @@ inputs:
     required: true
 
   # optional inputs
+  blender_executable_download_url:
+    description: The download url of the Blender executable.
+    required: false
   archive_output:
     description: If "true", exported files will be archived into a ".zip" file.
-    default: false
+    default: ''
     required: false
   archive_root_folder:
     description: If "true", files that are archived will be placed in a root folder within the archive.
