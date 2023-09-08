@@ -121,6 +121,13 @@ async function downloadExecutable(): Promise<void> {
   await downloadFile(executablePath, GODOT_DOWNLOAD_URL, cacheKey, restoreKey);
 }
 
+async function downloadBlender(): Promise<void> {
+  const executablePath = path.join(GODOT_WORKING_PATH, GODOT_ZIP);
+  const cacheKey = `godot-executable-${GODOT_DOWNLOAD_URL}`;
+  const restoreKey = `godot-executable-${GODOT_DOWNLOAD_URL}`;
+  await downloadFile(executablePath, GODOT_DOWNLOAD_URL, cacheKey, restoreKey);
+}
+
 function isGhes(): boolean {
   const ghUrl = new URL(process.env['GITHUB_SERVER_URL'] || 'https://github.com');
   return ghUrl.hostname.toUpperCase() !== 'GITHUB.COM';
