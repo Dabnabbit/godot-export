@@ -45,6 +45,10 @@ async function exportBuilds(): Promise<BuildResult[]> {
   await downloadGodot();
   core.endGroup();
 
+  core.startGroup('📐 Download Blender');
+  await downloadBlender();
+  core.endGroup();
+  
   core.startGroup('🔍 Adding Editor Settings');
   await addEditorSettings();
   core.endGroup();
